@@ -5,6 +5,7 @@ Install dependencies:
 ```
 npm install
 ```
+Add env variables to `.env`file
 
 Run backend
 ```
