@@ -8,16 +8,14 @@ const app = express();
 const startServer = async () => {
     await loaders(app);
 
-    if (config.ENV !== 'test') {
-        app.listen(config.PORT, () => {
-            console.log(`Server started on port ${process.env.PORT}`);
-        });
+    app.listen(config.PORT, () => {
+        console.log(`Server started on port ${process.env.PORT}`);
+    });
 
-        app.on('error', (error) => {
-            console.error(error.message);
-            process.exit(1);
-        });
-    }
+    app.on('error', (error) => {
+        console.error(error.message);
+        process.exit(1);
+    });
 };
 
 startServer();
