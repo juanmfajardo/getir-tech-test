@@ -8,7 +8,7 @@ const httpStatusCode = {
 const appStatusCode = {
     BAD_REQUEST: 1,
     INTERNAL_SERVER: 2,
-    NOT_FOUND: 2,
+    NOT_FOUND: 3,
     SUCCESS: 0,
 };
 
