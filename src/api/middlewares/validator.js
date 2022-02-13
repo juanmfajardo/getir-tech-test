@@ -8,7 +8,8 @@ const isValidGetRecordsBody = (req, res, next) => {
         return next();
     }
 
-    return responses.badRequest(res);
+    const [error] = validation.getRecordsBody.errors;
+    return responses.badRequest(res, { error: error.message, field: error.instancePath });
 };
 
 module.exports = { isValidGetRecordsBody };
